@@ -1,0 +1,4 @@
+interface:
+  display_name: "Effective Java"
+  short_description: "Apply Effective Java principles to Java code"
+  default_prompt: "Use $effective-java to review this Java code for API design, correctness, and maintainability."
