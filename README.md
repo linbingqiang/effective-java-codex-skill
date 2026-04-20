@@ -20,6 +20,12 @@ This repository contains paraphrased guidance and original workflow design. It d
 └── references/
     ├── item-map.md
     └── review-checklist.md
+
+openclaw/effective-java/
+├── SKILL.md
+└── references/
+    ├── item-map.md
+    └── review-checklist.md
 ```
 
 ## What This Skill Covers
@@ -48,6 +54,16 @@ cp -R .agents/skills/effective-java ~/.codex/skills/effective-java
 
 Then restart Codex.
 
+### Option 3: Publish or install in OpenClaw
+
+The OpenClaw/ClawHub-compatible bundle lives at:
+
+```bash
+openclaw/effective-java
+```
+
+That bundle keeps the OpenClaw-specific `name: effective_java` metadata without changing the Codex-facing skill.
+
 ## Example Prompts
 
 - `Use $effective-java to review this Java service class.`
@@ -74,6 +90,23 @@ Suggested tags:
 - `effective-java`
 - `code-review`
 - `refactoring`
+
+## OpenClaw / ClawHub
+
+This repository also contains a ClawHub-ready skill bundle:
+
+- `openclaw/effective-java/SKILL.md`
+
+Typical publish flow:
+
+```bash
+clawhub skill publish ./openclaw/effective-java \
+  --slug effective-java \
+  --name "Effective Java" \
+  --version 1.0.0 \
+  --tags java,code-review,refactoring,effective-java,latest \
+  --changelog "Initial public release"
+```
 
 ## Notes
 
